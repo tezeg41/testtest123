@@ -1,0 +1,12 @@
+#!/bin/bash
+temp=$(mktemp)
+
+for name in $(cut -d ":" -f 1 /etc/passw); do
+    
+    aus=$(wc -c name):$name 
+    echo $aus >> $temp 
+
+done
+
+sort -r -V $temp
+rm $temp

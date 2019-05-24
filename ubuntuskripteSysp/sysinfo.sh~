@@ -1,0 +1,7 @@
+#!/bin/bash
+cat /proc/cpuinfo | grep name | head -n  1
+cat /proc/meminfo | grep MemTotal
+cat /proc/meminfo | grep MemFree
+df -h
+./processes.sh
+cat /proc/version
